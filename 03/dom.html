@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fd9d9d;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ola">Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong></p>
+    <div>Clique em mim</div>
+
+    <script>
+        var p1 = document.getElementsByTagName("p")[0];
+        p1.innerText = "Alterando o texto do primeiro parágrafo usando DOM";
+
+        var p2 = document.getElementById("ola") 
+        p2.innerHTML = "Alterando o texto do primeiro parágrafo usando ById"
+        p2.style.color = "black";
+
+        var d = document.querySelector("div")
+        d.style.backgroundColor = "black";
+    </script>
+</body>
+</html>
+    </script>
+</body>
+</html>
