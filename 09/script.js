@@ -50,4 +50,3 @@ function verificar() {
             res.innerHTML = `Voce é um(a) ${genero} com ${idade} anos.`
             res.appendChild(img)}
         }
-        

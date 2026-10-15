@@ -17,6 +17,6 @@ function carregar() {
         foto.src = 'imagens/noite.jpg';
         document.body.style.background = '#1c1c4c';
         document.body.style.color = 'white';
-        document.getElementById('msg').style.color = 'black';
+        getElementById('msg').style.color = 'black';
     }
 }
