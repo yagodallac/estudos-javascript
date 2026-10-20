@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding-top: 20px;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    p {
+        padding: 0px 150px 10px 150px;
+        text-align: center;
+    }
+
+    p#limite {
+        font-weight: bold;
+        color: rgb(252, 252, 252);
+        background-color: red;
+        padding: 10px;
+        margin-left:370px;
+        margin-right: 370px;
+        text-align: center;
+    }
+
+    input[type="number"] {
+        width: 100px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    input[type="button"] {
+        padding: 7px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+        background-color: #2e6430;
+    }
+</style>
+
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <p>Digite a velocidade que você estava dirigindo:
+        <input type="number" id="velocidade">
+        <input type="button" value="Verificar" onclick="verificarVelocidade()">
+    </p>
+    <p>
+        A multa aumenta de acordo com a velocidade registrada. Se você estiver dentro do limite de velocidade, não haverá multa. Se estiver acima do limite, a multa será aplicada de acordo com a gravidade da infração.
+    </p>
+    <p id="limite">
+        LIMITE: 80 km/h
+    </p>
+
+    <script>
+        function verificarVelocidade() {
+            var velocidade = document.getElementById("velocidade").value;
+
+            if (velocidade <= 80) {
+                document.write("Você está dentro do limite de velocidade. Boa viagem!");
+            } else if (velocidade > 80 && velocidade <= 100) {
+                document.write("Você está acima do limite de velocidade. Multa leve.");
+            } else if (velocidade > 100 && velocidade <= 120) {
+                document.write("Você está muito acima do limite de velocidade. Multa grave.");
+            } else {
+                document.write("Você está em excesso de velocidade. Multa gravíssima.");
+            }
+            document.write(`<p>Velocidade registrada: ${velocidade} km/h</p>`);
+            document.write('<p><input type="button" value="Voltar" onclick="location.reload()"></p>');
+        }
+    </script>
+</body>
+</html>
