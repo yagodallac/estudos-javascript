@@ -13,6 +13,8 @@ function verificar() {
         var genero = ''
         var img = document.createElement('img')
 
+        
+
         if (sexo[0].checked) {
             genero = 'Homem'
             if (idade >= 0 && idade < 10) {
@@ -47,6 +49,9 @@ function verificar() {
             }
         }   
 
-            res.innerHTML = `Voce é um(a) ${genero} com ${idade} anos.`
-            res.appendChild(img)}
+            res.innerHTML = `voce é um(a) ${genero} com ${idade} anos.<br>`
+            res.appendChild(img)
+            res.innerHTML += `<br><button id="botaoVoltar" onclick="location.reload()">Ver novamente</button>`
+        }
+            
         }
