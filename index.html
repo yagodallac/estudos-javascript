@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar!</h1>
+    </header>
+
+    <section>
+
+        <div id="preencha">
+            <p>Preencha todos os campos</p> 
+        </div>
+
+        <div>
+            <p>Contando de</p>
+            <p><input type="number" name="inicio" id="inicio"></p>
+            <p>Até</p>
+            <p><input type="number" name="fim" id="fim"></p>
+            <p>Pulando de</p>
+            <p><input type="text" name="passo" id="passo"></p>
+
+            <p>
+                <button onclick="contar()">Contar</button>
+            </p>
+        </div>
+
+        <div id="resultado"></div>
+
+    </section>
+
+    <footer>
+        <p>&copy; @yagodallac</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
